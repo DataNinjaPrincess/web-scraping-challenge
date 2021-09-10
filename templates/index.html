@@ -12,14 +12,14 @@
   </head>
   <body>
     <div class="container">
-      <!-- Add Jumbotron to Header -->
+      <!-- header -->
       <div class="jumbotron text-center">
         <h1>Mission to Mars</h1>
-        <!-- Add a button to activate scraping script -->
+        <!-- scrape button  -->
         <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
       </div>
 
-      <!-- Add section for Mars News -->
+      <!-- news -->
       <div class="row" id="mars-news">
         <div class="col-md-12">
           <div class="media">
@@ -32,21 +32,14 @@
         </div>
       </div>
 
-      <!-- Section for Featured Image and Facts table -->
+      <!-- pics and facts -->
       <div class="row" id="mars-featured-image">
         <div class="col-md-8">
-          <h2>Featured Mars Image</h2>
-
-          <!-- if images is False/None/non-existent, then default to error message -->
-          <img
-            src="{{mars.featured_image | default('static/images/error.png', true) }}"
-            class="img-responsive"
-            alt="Responsive image"
-          />
+          <h2>Featured Image</h2>
         </div>
 
         <div class="col-md-4">
-          <!-- Mars Facts -->
+          <!-- facts -->
           <div class="row" id="mars-facts">
             <h4>Mars Facts</h4>
             {{ mars.facts | safe }}
@@ -54,7 +47,7 @@
         </div>
       </div>
 
-      <!-- Section for Mars Hemispheres -->
+      <!-- hemispheres -->
       <div class="row" id="mars-hemispheres">
         <div class="page-header">
           <h2 class="text-center">Mars Hemispheres</h2>
